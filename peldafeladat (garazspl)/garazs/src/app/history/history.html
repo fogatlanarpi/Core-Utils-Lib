@@ -1,0 +1,16 @@
+    <div style="padding: 20px; font-family: Arial; max-width: 500px; margin: auto;">
+      <h2>Szerviztörténet (Motor ID: {{vId}})</h2>
+      
+      <p *ngIf="logs.length === 0" style="color: gray; font-style: italic;">Nincs még rögzített bejegyzés.</p>
+      
+      <ol *ngIf="logs.length > 0" style="padding-left: 20px;">
+        <li *ngFor="let log of logs" style="margin-bottom: 12px; border-bottom: 1px dashed #ccc; padding-bottom: 6px;">
+          <strong>{{log.component}}</strong> - <small>{{log.date}}</small>
+          <p style="margin: 4px 0 0 0; color: #555;">{{log.description}}</p>
+        </li>
+      </ol>
+      
+      <button [routerLink]="['/']" style="background: #2c3e50; color: white; padding: 10px; border: none; margin-top: 15px; cursor: pointer;">
+        Vissza a garázsba
+      </button>
+    </div>

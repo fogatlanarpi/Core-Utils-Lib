@@ -1,0 +1,16 @@
+    <div style="padding: 20px; font-family: Arial; max-width: 400px; margin: auto;">
+      <div *ngIf="errMsg" style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #e53e3e; color: white; padding: 15px; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); z-index: 999;">
+        <strong>Szerver hiba:</strong> {{ errMsg }}
+      </div>
+
+      <h2>Szerelés rögzítése (Motor ID: {{vId}})</h2>
+      
+      <form #f="ngForm" (ngSubmit)="save()">
+        <p>Dátum: <input type="date" [(ngModel)]="date" name="date" required style="width: 100%;"></p>
+        <p>Alkatrész: <input type="text" [(ngModel)]="comp" name="comp" required style="width: 100%;"></p>
+        <p>Leírás: <textarea [(ngModel)]="desc" name="desc" required style="width:100%;"></textarea></p>
+        
+        <button type="submit" [disabled]="!f.valid" style="background: green; color: white; padding: 10px; border: none; cursor: pointer;">Mentés</button>
+        <button type="button" [routerLink]="['/']" style="background: gray; color: white; padding: 10px; border: none; cursor: pointer; margin-left: 10px;">Mégse</button>
+      </form>
+    </div>

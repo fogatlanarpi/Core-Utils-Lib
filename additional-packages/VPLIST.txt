@@ -1,0 +1,44 @@
+export type KilatoItem = {
+  viewpointId: number;
+  rating: number;
+  email: string;
+  comment: string;
+  id: number;
+};
+
+export default function HomePage() {
+  const [kilátók, setKilátók] = useState<KilatoItem[]>([]);
+  const router = useRouter();
+  const searhParams = useSearchParams();
+  const id = Number(searhParams.get("id"));
+  const [hiba, setHiba] = useState<string>("");
+
+  useEffect(() => {
+    async function getData() {
+      const response = await axios.get(http://localhost:3000/api/rate/${id});
+      setKilátók(response.data);
+      if (response.data.length == 0) {
+        setHiba("A kilátó még nincs értékelve");
+      }
+    }
+    getData();
+  }, []);
+  return (
+    <div className="flex flex-col items-center">
+      <h1 className="mb-2 text-center font-bold">Kilátó értékelései</h1>
+      <div className="flex flex-col">
+        {kilátók.map((kilátó) => (
+          <ul key={kilátó.id}>
+            <li>
+              {kilátó.email} {kilátó.rating} {kilátó.comment}
+            </li>
+          </ul>
+        ))}
+        {hiba && <div>{hiba}</div>}
+        <Link className="btn mt-2 bg-primary" href={"/"}>
+          Vissza a főoldalra
+        </Link>
+      </div>
+    </div>
+  );
+}

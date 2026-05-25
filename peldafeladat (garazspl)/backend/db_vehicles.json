@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "brand": "Yamaha",
+    "model": "FZ6",
+    "year": 2007,
+    "pictureUrl": "https://nits68.github.io/static/motor-garazs/yamaha_fz6.jpg"
+  },
+  {
+    "id": 2,
+    "brand": "Honda",
+    "model": "Hornet 600",
+    "year": 2000,
+    "pictureUrl": "https://nits68.github.io/static/motor-garazs/honda_hornet.jpg"
+  },
+  {
+    "id": 3,
+    "brand": "Babetta",
+    "model": "210",
+    "year": 1990,
+    "pictureUrl": "https://nits68.github.io/static/motor-garazs/babetta_210.jpg"
+  }
+]

@@ -1,0 +1,22 @@
+import prisma from "@/lib/prisma";
+import { NextRequest, NextResponse } from "next/server";
+
+export async function GET() {
+  const data = await prisma.koncert.findMany({
+    omit: {
+      id: true,
+      egyuttesId: true,
+      varos: true,
+    },
+    include: {
+      egyuttes: {
+        omit: {
+          id: true,
+          alapitva: true,
+        },
+      },
+    },
+  });
+
+  return NextResponse.json({ data });
+}

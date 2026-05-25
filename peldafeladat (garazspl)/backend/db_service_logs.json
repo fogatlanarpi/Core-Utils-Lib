@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "vehicleId": 3,
+    "date": "2026-05-10",
+    "component": "Karburátor",
+    "description": "Dellorto SHA karburátor felszerelése egyedi szívócsonk adapterrel, főfúvóka hangolása."
+  },
+  {
+    "id": 2,
+    "vehicleId": 1,
+    "date": "2026-04-15",
+    "component": "Szelep hézag",
+    "description": "Szelephézag ellenőrzés és korongozás, vezérlés feszességének ellenőrzése."
+  },
+  {
+    "id": 3,
+    "vehicleId": 1,
+    "date": "2026-05-16",
+    "component": "zalan",
+    "description": "tofalvi"
+  },
+  {
+    "id": 4,
+    "vehicleId": 1,
+    "date": "2026-05-01",
+    "component": "asd",
+    "description": "ads"
+  }
+]

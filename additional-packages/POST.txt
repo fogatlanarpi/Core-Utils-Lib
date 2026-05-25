@@ -1,0 +1,56 @@
+import prisma from "@/lib/prisma";
+import { NextRequest, NextResponse } from "next/server";
+
+export type RendelesItem = {
+  id: number;
+  email: string;
+  koncertId: number;
+  db: number;
+};
+
+export async function POST(request: NextRequest) {
+  const body: RendelesItem = await request.json();
+  try {
+    const koncert = await prisma.koncert.findUnique({
+      where: { id: body.koncertId },
+    });
+    if (!koncert) {
+      return NextResponse.json({
+        message: Ilyen (${body.koncertId}) id-val rendelekező koncert nincsen,
+      });
+    }
+
+    const korábbiRendelések = await prisma.rendeles.findMany({
+      where: { koncertId: body.koncertId },
+    });
+
+    let eladottJegyek: number = 0;
+    korábbiRendelések.forEach((element) => {
+      eladottJegyek += element.db;
+    });
+
+    const elérhetőJegyek = koncert.kapacitas - eladottJegyek;
+
+    if (elérhetőJegyek < body.db) {
+      return NextResponse.json({
+        message: Nincs ennyi jegy a koncertre ${body.db} mert csak ennyi van ${elérhetőJegyek},
+      });
+    }
+
+    const newOne = await prisma.rendeles.create({
+      data: body,
+    });
+    return NextResponse.json({ message: "Sikeres várásrlás" });
+  } catch (error) {
+    if (error instanceof Error && error.message.includes("failed on the constraint: _id_")) {
+      return NextResponse.json(
+        { message: Ilyen id-val (${body.id}) már vásároltak },
+        { status: 404 },
+      );
+    }
+    return NextResponse.json(
+      { message: error instanceof Error ? error.message : "Ismeretlen hiba!" },
+      { status: 500 },
+    );
+  }
+}

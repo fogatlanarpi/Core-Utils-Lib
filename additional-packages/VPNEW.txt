@@ -1,0 +1,83 @@
+export type KilatoItem = {
+  viewpointId: number;
+  rating: number;
+  email: string;
+  comment: string;
+};
+
+export default function HomePage() {
+  const [hiba, setHiba] = useState<string>("");
+
+  const searhParams = useSearchParams();
+  const id = Number(searhParams.get("id"));
+  const [newKilátó, setnewKilátó] = useState<KilatoItem>({
+    viewpointId: id,
+    rating: 0,
+    email: "",
+    comment: "",
+  });
+  const router = useRouter();
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    try {
+      const res = await axios.post(http://localhost:3000/api/rate, newKilátó);
+      alert("Sikeres értékelés");
+      router.push("/");
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.data?.message);
+        setHiba(error.response?.data?.message);
+      }
+    }
+  }
+return (
+    <div className="flex min-h-screen items-center justify-center">
+      <form action="" onSubmit={handleSubmit}>
+        <div className="flex flex-col space-y-4 rounded-2xl bg-white p-10 shadow-2xl">
+          <h1 className="text-3xl font-bold">Kilátók értékelése</h1>
+          <div>
+            <label htmlFor="email">Az Ön e-mail címe:</label>
+            <input
+              className="input input-primary"
+              id="email"
+              type="email"
+              onChange={(e) => setnewKilátó({ ...newKilátó, email: e.target.value })}
+            />
+          </div>
+          <div>
+            <label htmlFor="rate">Értékelés: {newKilátó.rating} pont</label>
+            <input
+              className="range range-primary"
+              id="rate"
+              max="10"
+              min="1"
+              type="range"
+              value={newKilátó.rating}
+              onChange={(e) => setnewKilátó({ ...newKilátó, rating: Number(e.target.value) })}
+            />
+          </div>
+          <div>
+            <label htmlFor="comment">Megjegyzés:</label>
+            <textarea
+              className="textarea textarea-primary"
+              id="comment"
+              name="comment"
+              rows={3}
+              onChange={(e) => setnewKilátó({ ...newKilátó, comment: e.target.value })}
+            />
+          </div>
+          <div className="mx-auto flex gap-2">
+            <button className="btn btn-primary" type="submit">
+              Küldés
+            </button>
+            <Link className="btn bg-secondary" href={"/"}>
+              Mégse
+            </Link>
+          </div>
+        </div>
+        {hiba && <div>{hiba}</div>}
+      </form>
+    </div>
+  );
+}

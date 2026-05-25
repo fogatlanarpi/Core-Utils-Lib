@@ -1,0 +1,30 @@
+import prisma from "@/lib/prisma";
+import { NextRequest, NextResponse } from "next/server";
+
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ email: string }> },
+) {
+  const { email } = await params;
+  const data = await prisma.rendeles.findMany({
+    where: { email: email },
+    omit: {
+      id: true,
+      koncertId: true,
+    },
+    include: {
+      koncert: {
+        select: {
+          varos: true,
+          datum: true,
+          egyuttes: {
+            select: {
+              nev: true,
+            },
+          },
+        },
+      },
+    },
+  });
+  return NextResponse.json({ data });
+}

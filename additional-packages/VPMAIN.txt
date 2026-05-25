@@ -1,0 +1,54 @@
+export type KilatoItem = {
+  id: number;
+  viewpointName: string;
+  mountain: string;
+  locationId: number;
+  height: number;
+  description: string;
+  built: string;
+  imageUrl: string;
+};
+
+export default function HomePage() {
+  const [kilátók, setKilátók] = useState<KilatoItem[]>([]);
+  const router = useRouter();
+
+  function handleClick1(id: number) {
+    router.push(/listedkilatos?id=${id});
+  }
+
+  function handleClick2(id: number) {
+    router.push(/newkilato?id=${id});
+  }
+
+  useEffect(() => {
+    async function getData() {
+      const response = await axios.get("http://localhost:3000/api/viewpoints2");
+      setKilátók(response.data);
+    }
+    getData();
+  }, []);
+
+  return (
+    <div>
+      <div className="flex flex-wrap justify-center gap-6">
+        {kilátók.map((kilátó) => (
+          <div className="flex flex-col items-center" key={kilátó.id}>
+            <div>
+              <Image alt="kép" height={200} src={kilátó.imageUrl} width={200}></Image>
+            </div>
+            <h1 className="font-bold">{kilátó.viewpointName}</h1>
+            <div className="flex flex-col gap-2">
+              <button className="btn bg-primary" onClick={() => handleClick2(kilátó.id)}>
+                Kilátó értékelése
+              </button>
+              <button className="btn bg-warning" onClick={() => handleClick1(kilátó.id)}>
+                Kilátó értékelések elolvasása
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
