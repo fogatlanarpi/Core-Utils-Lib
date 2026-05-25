@@ -1,0 +1,71 @@
+var airlines = new List<Airline>();
+var flights = new List<Flight>();
+
+Console.WriteLine("4.feladat");
+
+
+var sikeresBeolvasás = 0;
+try
+{
+    flights = Flight.LoadFromJSON();
+    sikeresBeolvasás++;
+}
+catch
+{
+    Console.WriteLine("\tA járatokat tartalamazó állomány beolvasása sikertelen!");
+}
+try
+{
+    airlines = Airline.LoadFromJSON();
+    sikeresBeolvasás++;
+
+}
+catch
+{
+    Console.WriteLine("\tA légitársaságokat tartalamazó állomány beolvasása sikertelen!");
+}
+
+if (sikeresBeolvasás == 2)
+{
+    Console.WriteLine("\tFájlok sikeresen beolvasva \n");
+}
+
+float maxHour = 0;
+ do
+ {
+     Console.Write("6.feladat: Kérem adja meg a maximális időt órában: ");
+     try
+     {
+         maxHour = float.Parse(Console.ReadLine().Replace(".", ","));
+
+         if(maxHour <= 0)
+         {
+             Console.WriteLine("Hibás érték! Kérjük adjon meg 0-nál nagyobb számot!");
+         }
+     }
+     catch
+     {
+         Console.WriteLine("Hibás érték! Kérjük adjon meg 0-nál nagyobb számot!");
+     }
+
+ } while (maxHour <= 0);
+
+ flights.Where(x => x.flight_duration <= maxHour && x.flight_duration != null).ToList().ForEach(f =>
+ {
+     Console.WriteLine($"\t{f.destination} - {f.flight_duration} - ({f.date})\n");
+ });
+Console.WriteLine("8.feladat: A maximális eltelt napok száma két légitársaság útjai között");
+
+var filteredFlights = flights.GroupBy(x => x.airline_id).Select(g => new
+{
+    airlineId = g.Key,
+    airlineName = airlines.Single(x => x.id == g.Key).name,
+    flights = g.OrderBy(x => x.date).ToList(),
+});
+
+
+foreach (var item in filteredFlights)
+{
+    var eredmeny = item.flights.Zip(item.flights.Skip(1), (a, b) => (b.date - a.date).TotalHours).Max();
+    Console.WriteLine($"\t{item.airlineName}: {eredmeny:F0} óra");
+}

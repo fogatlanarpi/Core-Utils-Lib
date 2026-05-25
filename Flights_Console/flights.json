@@ -1,0 +1,956 @@
+[
+  {
+    "id": 1,
+    "destination": "Eindhoven",
+    "gate": "A12",
+    "date": "2026-05-01T06:10:00",
+    "airline_id": 1,
+    "flight_duration": 2.1,
+    "price": 12500
+  },
+  {
+    "id": 2,
+    "destination": "London Stansted",
+    "gate": "B08",
+    "date": "2026-05-01T06:35:00",
+    "airline_id": 2,
+    "flight_duration": 2.6,
+    "price": 9800
+  },
+  {
+    "id": 3,
+    "destination": "München",
+    "gate": "A15",
+    "date": "2026-05-01T08:15:00",
+    "airline_id": 3,
+    "flight_duration": 1.25,
+    "price": 48200
+  },
+  {
+    "id": 4,
+    "destination": "Isztambul",
+    "gate": "B04",
+    "date": "2026-05-01T09:40:00",
+    "airline_id": 4,
+    "flight_duration": 2.15,
+    "price": 55000
+  },
+  {
+    "id": 5,
+    "destination": "Párizs CDG",
+    "gate": "A18",
+    "date": "2026-05-01T10:10:00",
+    "airline_id": 6,
+    "flight_duration": 2.2,
+    "price": 42900
+  },
+  {
+    "id": 6,
+    "destination": "Dubai",
+    "gate": "B12",
+    "date": "2026-05-01T13:20:00",
+    "airline_id": 5,
+    "flight_duration": 5.5,
+    "price": 145000
+  },
+  {
+    "id": 7,
+    "destination": "Amszterdam",
+    "gate": "A14",
+    "date": "2026-05-01T15:05:00",
+    "airline_id": 7,
+    "flight_duration": 2.05,
+    "price": 61200
+  },
+  {
+    "id": 8,
+    "destination": "London Heathrow",
+    "gate": "B03",
+    "date": "2026-05-01T17:45:00",
+    "airline_id": 8,
+    "flight_duration": 2.7,
+    "price": 78000
+  },
+  {
+    "id": 9,
+    "destination": "Varsó",
+    "gate": "A07",
+    "date": "2026-05-01T20:10:00",
+    "airline_id": 9,
+    "flight_duration": 1.15,
+    "price": 31500
+  },
+  {
+    "id": 10,
+    "destination": "Bécs",
+    "gate": "A02",
+    "date": "2026-05-02T07:30:00",
+    "airline_id": 10,
+    "flight_duration": 0.75,
+    "price": 38000
+  },
+  {
+    "id": 11,
+    "destination": "Berlin",
+    "gate": "A11",
+    "date": "2026-05-02T08:50:00",
+    "airline_id": 1,
+    "flight_duration": 1.5,
+    "price": 15400
+  },
+  {
+    "id": 12,
+    "destination": "Barcelona",
+    "gate": "A20",
+    "date": "2026-05-02T11:20:00",
+    "airline_id": 2,
+    "flight_duration": 2.65,
+    "price": 22100
+  },
+  {
+    "id": 13,
+    "destination": "Frankfurt",
+    "gate": "A16",
+    "date": "2026-05-02T14:00:00",
+    "airline_id": 3,
+    "flight_duration": 1.7,
+    "price": 52600
+  },
+  {
+    "id": 14,
+    "destination": "Róma",
+    "gate": "A05",
+    "date": "2026-05-02T16:45:00",
+    "airline_id": 1,
+    "flight_duration": 1.8,
+    "price": 17800
+  },
+  {
+    "id": 15,
+    "destination": "Madrid",
+    "gate": "A22",
+    "date": "2026-05-02T19:30:00",
+    "airline_id": 2,
+    "flight_duration": 3.2,
+    "price": 29400
+  },
+  {
+    "id": 16,
+    "destination": "Zürich",
+    "gate": "A09",
+    "date": "2026-05-03T06:20:00",
+    "airline_id": 10,
+    "flight_duration": 1.4,
+    "price": 45000
+  },
+  {
+    "id": 17,
+    "destination": "Tel-Aviv",
+    "gate": "B14",
+    "date": "2026-05-03T09:15:00",
+    "airline_id": 1,
+    "flight_duration": 3.25,
+    "price": 34000
+  },
+  {
+    "id": 18,
+    "destination": "Brüsszel",
+    "gate": "A13",
+    "date": "2026-05-03T11:55:00",
+    "airline_id": 7,
+    "flight_duration": 2.1,
+    "price": 58200
+  },
+  {
+    "id": 19,
+    "destination": "Milánó",
+    "gate": "A03",
+    "date": "2026-05-03T14:30:00",
+    "airline_id": 2,
+    "flight_duration": 1.6,
+    "price": 11200
+  },
+  {
+    "id": 20,
+    "destination": "Prága",
+    "gate": "A10",
+    "date": "2026-05-03T17:10:00",
+    "airline_id": 9,
+    "flight_duration": 1.05,
+    "price": 28900
+  },
+  {
+    "id": 21,
+    "destination": "Athén",
+    "gate": "A21",
+    "date": "2026-05-03T20:45:00",
+    "airline_id": 1,
+    "flight_duration": 2.0,
+    "price": 19500
+  },
+  {
+    "id": 22,
+    "destination": "Lyon",
+    "gate": "A17",
+    "date": "2026-05-04T07:15:00",
+    "airline_id": 6,
+    "flight_duration": 2.15,
+    "price": 41000
+  },
+  {
+    "id": 23,
+    "destination": "Doha",
+    "gate": "B11",
+    "date": "2026-05-04T10:00:00",
+    "airline_id": 5,
+    "flight_duration": 5.25,
+    "price": 158000
+  },
+  {
+    "id": 24,
+    "destination": "Dublin",
+    "gate": "B02",
+    "date": "2026-05-04T12:45:00",
+    "airline_id": 2,
+    "flight_duration": 3.15,
+    "price": 24500
+  },
+  {
+    "id": 25,
+    "destination": "Oslo",
+    "gate": "A19",
+    "date": "2026-05-04T15:20:00",
+    "airline_id": 1,
+    "flight_duration": 2.45,
+    "price": 22000
+  },
+  {
+    "id": 26,
+    "destination": "Helsinki",
+    "gate": "A15",
+    "date": "2026-05-04T18:35:00",
+    "airline_id": 3,
+    "flight_duration": 2.3,
+    "price": 49000
+  },
+  {
+    "id": 27,
+    "destination": "Koppenhága",
+    "gate": "A08",
+    "date": "2026-05-04T21:10:00",
+    "airline_id": 2,
+    "flight_duration": 1.9,
+    "price": 16700
+  },
+  {
+    "id": 28,
+    "destination": "Lisszabon",
+    "gate": "A22",
+    "date": "2026-05-05T06:50:00",
+    "airline_id": 1,
+    "flight_duration": 3.75,
+    "price": 32000
+  },
+  {
+    "id": 29,
+    "destination": "Antalya",
+    "gate": "B05",
+    "date": "2026-05-05T09:30:00",
+    "airline_id": 4,
+    "flight_duration": 2.4,
+    "price": 44500
+  },
+  {
+    "id": 30,
+    "destination": "Nizza",
+    "gate": "A12",
+    "date": "2026-05-05T12:15:00",
+    "airline_id": 6,
+    "flight_duration": 2.1,
+    "price": 39800
+  },
+  {
+    "id": 31,
+    "destination": "Edinburgh",
+    "gate": "B09",
+    "date": "2026-05-05T15:40:00",
+    "airline_id": 8,
+    "flight_duration": 3.0,
+    "price": 65000
+  },
+  {
+    "id": 32,
+    "destination": "Stockholm",
+    "gate": "A04",
+    "date": "2026-05-05T18:20:00",
+    "airline_id": 1,
+    "flight_duration": 2.2,
+    "price": 18900
+  },
+  {
+    "id": 33,
+    "destination": "Krakkó",
+    "gate": "A01",
+    "date": "2026-05-05T21:55:00",
+    "airline_id": 9,
+    "flight_duration": 1.0,
+    "price": 24000
+  },
+  {
+    "id": 34,
+    "destination": "Genf",
+    "gate": "A11",
+    "date": "2026-05-06T07:10:00",
+    "airline_id": 10,
+    "flight_duration": 1.6,
+    "price": 41200
+  },
+  {
+    "id": 35,
+    "destination": "Bari",
+    "gate": "A14",
+    "date": "2026-05-06T10:45:00",
+    "airline_id": 1,
+    "flight_duration": 1.45,
+    "price": 13200
+  },
+  {
+    "id": 36,
+    "destination": "Valetta",
+    "gate": "A19",
+    "date": "2026-05-06T13:25:00",
+    "airline_id": 2,
+    "flight_duration": 2.25,
+    "price": 26400
+  },
+  {
+    "id": 37,
+    "destination": "Manchester",
+    "gate": "B01",
+    "date": "2026-05-06T16:00:00",
+    "airline_id": 8,
+    "flight_duration": 2.85,
+    "price": 71000
+  },
+  {
+    "id": 38,
+    "destination": "Nápoly",
+    "gate": "A06",
+    "date": "2026-05-06T19:50:00",
+    "airline_id": 1,
+    "flight_duration": 1.7,
+    "price": 15900
+  },
+  {
+    "id": 39,
+    "destination": "Hamburg",
+    "gate": "A16",
+    "date": "2026-05-07T08:30:00",
+    "airline_id": 3,
+    "flight_duration": 1.65,
+    "price": 47000
+  },
+  {
+    "id": 40,
+    "destination": "Porto",
+    "gate": "A22",
+    "date": "2026-05-07T11:15:00",
+    "airline_id": 1,
+    "flight_duration": 3.8,
+    "price": 35600
+  },
+  {
+    "id": 41,
+    "destination": "Dubai",
+    "gate": "B12",
+    "date": "2026-05-07T14:40:00",
+    "airline_id": 5,
+    "flight_duration": 5.5,
+    "price": 139000
+  },
+  {
+    "id": 42,
+    "destination": "Amszterdam",
+    "gate": "A13",
+    "date": "2026-05-07T17:20:00",
+    "airline_id": 7,
+    "flight_duration": 2.1,
+    "price": 59900
+  },
+  {
+    "id": 43,
+    "destination": "Isztambul",
+    "gate": "B06",
+    "date": "2026-05-07T20:30:00",
+    "airline_id": 4,
+    "flight_duration": 2.2,
+    "price": 53500
+  },
+  {
+    "id": 44,
+    "destination": "Bécs",
+    "gate": "A02",
+    "date": "2026-05-08T07:15:00",
+    "airline_id": 10,
+    "flight_duration": 0.7,
+    "price": 39900
+  },
+  {
+    "id": 45,
+    "destination": "Alicante",
+    "gate": "A18",
+    "date": "2026-05-08T10:00:00",
+    "airline_id": 2,
+    "flight_duration": 3.1,
+    "price": 28700
+  },
+  {
+    "id": 46,
+    "destination": "Párizs CDG",
+    "gate": "A17",
+    "date": "2026-05-08T13:40:00",
+    "airline_id": 6,
+    "flight_duration": 2.25,
+    "price": 46800
+  },
+  {
+    "id": 47,
+    "destination": "London Stansted",
+    "gate": "B07",
+    "date": "2026-05-08T16:55:00",
+    "airline_id": 2,
+    "flight_duration": 2.55,
+    "price": 11500
+  },
+  {
+    "id": 48,
+    "destination": "München",
+    "gate": "A15",
+    "date": "2026-05-08T19:20:00",
+    "airline_id": 3,
+    "flight_duration": 1.2,
+    "price": 49000
+  },
+  {
+    "id": 49,
+    "destination": "Málaga",
+    "gate": "A21",
+    "date": "2026-05-09T06:40:00",
+    "airline_id": 1,
+    "flight_duration": 3.6,
+    "price": 31200
+  },
+  {
+    "id": 50,
+    "destination": "Varsó",
+    "gate": "A07",
+    "date": "2026-05-09T09:15:00",
+    "airline_id": 9,
+    "flight_duration": 1.1,
+    "price": 32800
+  },
+  {
+    "id": 51,
+    "destination": "Frankfurt",
+    "gate": "A16",
+    "date": "2026-05-09T12:00:00",
+    "airline_id": 3,
+    "flight_duration": 1.75,
+    "price": 55400
+  },
+  {
+    "id": 52,
+    "destination": "Tel-Aviv",
+    "gate": "B13",
+    "date": "2026-05-09T15:30:00",
+    "airline_id": 1,
+    "flight_duration": 3.2,
+    "price": 36500
+  },
+  {
+    "id": 53,
+    "destination": "Zürich",
+    "gate": "A09",
+    "date": "2026-05-09T18:10:00",
+    "airline_id": 10,
+    "flight_duration": 1.45,
+    "price": 44800
+  },
+  {
+    "id": 54,
+    "destination": "London Luton",
+    "gate": "B04",
+    "date": "2026-05-09T21:25:00",
+    "airline_id": 1,
+    "flight_duration": 2.6,
+    "price": 14200
+  },
+  {
+    "id": 55,
+    "destination": "Bologna",
+    "gate": "A05",
+    "date": "2026-05-10T07:50:00",
+    "airline_id": 2,
+    "flight_duration": 1.4,
+    "price": 10900
+  },
+  {
+    "id": 56,
+    "destination": "Brüsszel",
+    "gate": "A12",
+    "date": "2026-05-10T11:30:00",
+    "airline_id": 7,
+    "flight_duration": 2.0,
+    "price": 57100
+  },
+  {
+    "id": 57,
+    "destination": "Isztambul",
+    "gate": "B08",
+    "date": "2026-05-10T14:50:00",
+    "airline_id": 4,
+    "flight_duration": 2.2,
+    "price": 51000
+  },
+  {
+    "id": 58,
+    "destination": "Milánó",
+    "gate": "A03",
+    "date": "2026-05-10T17:40:00",
+    "airline_id": 2,
+    "flight_duration": 1.55,
+    "price": 11800
+  },
+  {
+    "id": 59,
+    "destination": "Doha",
+    "gate": "B11",
+    "date": "2026-05-10T20:15:00",
+    "airline_id": 5,
+    "flight_duration": 5.3,
+    "price": 162000
+  },
+  {
+    "id": 60,
+    "destination": "Barcelona",
+    "gate": "A20",
+    "date": "2026-05-11T06:30:00",
+    "airline_id": 1,
+    "flight_duration": 2.6,
+    "price": 23400
+  },
+  {
+    "id": 61,
+    "destination": "Párizs CDG",
+    "gate": "A18",
+    "date": "2026-05-11T09:20:00",
+    "airline_id": 6,
+    "flight_duration": 2.2,
+    "price": 44500
+  },
+  {
+    "id": 62,
+    "destination": "Eindhoven",
+    "gate": "A10",
+    "date": "2026-05-11T12:55:00",
+    "airline_id": 2,
+    "flight_duration": 2.05,
+    "price": 12900
+  },
+  {
+    "id": 63,
+    "destination": "Berlin",
+    "gate": "A13",
+    "date": "2026-05-11T15:40:00",
+    "airline_id": 1,
+    "flight_duration": 1.45,
+    "price": 14900
+  },
+  {
+    "id": 64,
+    "destination": "London Heathrow",
+    "gate": "B02",
+    "date": "2026-05-11T18:10:00",
+    "airline_id": 8,
+    "flight_duration": 2.75,
+    "price": 74500
+  },
+  {
+    "id": 65,
+    "destination": "Róma",
+    "gate": "A04",
+    "date": "2026-05-11T21:30:00",
+    "airline_id": 1,
+    "flight_duration": 1.8,
+    "price": 16500
+  },
+  {
+    "id": 66,
+    "destination": "Madrid",
+    "gate": "A22",
+    "date": "2026-05-12T07:45:00",
+    "airline_id": 2,
+    "flight_duration": 3.25,
+    "price": 28900
+  },
+  {
+    "id": 67,
+    "destination": "Bécs",
+    "gate": "A02",
+    "date": "2026-05-12T10:15:00",
+    "airline_id": 10,
+    "flight_duration": 0.75,
+    "price": 37200
+  },
+  {
+    "id": 68,
+    "destination": "Athén",
+    "gate": "A21",
+    "date": "2026-05-12T13:50:00",
+    "airline_id": 1,
+    "flight_duration": 2.0,
+    "price": 21800
+  },
+  {
+    "id": 69,
+    "destination": "Amszterdam",
+    "gate": "A14",
+    "date": "2026-05-12T16:20:00",
+    "airline_id": 7,
+    "flight_duration": 2.1,
+    "price": 62500
+  },
+  {
+    "id": 70,
+    "destination": "Oslo",
+    "gate": "A19",
+    "date": "2026-05-12T19:40:00",
+    "airline_id": 1,
+    "flight_duration": 2.4,
+    "price": 24100
+  },
+  {
+    "id": 71,
+    "destination": "Antalya",
+    "gate": "B05",
+    "date": "2026-05-13T08:10:00",
+    "airline_id": 4,
+    "flight_duration": 2.45,
+    "price": 46000
+  },
+  {
+    "id": 72,
+    "destination": "Helsinki",
+    "gate": "A15",
+    "date": "2026-05-13T11:35:00",
+    "airline_id": 3,
+    "flight_duration": 2.35,
+    "price": 50500
+  },
+  {
+    "id": 73,
+    "destination": "Lyon",
+    "gate": "A17",
+    "date": "2026-05-13T14:25:00",
+    "airline_id": 6,
+    "flight_duration": 2.15,
+    "price": 43500
+  },
+  {
+    "id": 74,
+    "destination": "Dublin",
+    "gate": "B10",
+    "date": "2026-05-13T17:15:00",
+    "airline_id": 2,
+    "flight_duration": 3.2,
+    "price": 23200
+  },
+  {
+    "id": 75,
+    "destination": "Krakkó",
+    "gate": "A01",
+    "date": "2026-05-13T20:50:00",
+    "airline_id": 9,
+    "flight_duration": 1.0,
+    "price": 25100
+  },
+  {
+    "id": 76,
+    "destination": "Stockholm",
+    "gate": "A11",
+    "date": "2026-05-14T06:55:00",
+    "airline_id": 1,
+    "flight_duration": 2.2,
+    "price": 17400
+  },
+  {
+    "id": 77,
+    "destination": "Dubai",
+    "gate": "B12",
+    "date": "2026-05-14T09:40:00",
+    "airline_id": 5,
+    "flight_duration": 5.5,
+    "price": 142000
+  },
+  {
+    "id": 78,
+    "destination": "Prága",
+    "gate": "A06",
+    "date": "2026-05-14T12:20:00",
+    "airline_id": 9,
+    "flight_duration": 1.1,
+    "price": 29800
+  },
+  {
+    "id": 79,
+    "destination": "Genf",
+    "gate": "A09",
+    "date": "2026-05-14T15:05:00",
+    "airline_id": 10,
+    "flight_duration": 1.65,
+    "price": 44200
+  },
+  {
+    "id": 80,
+    "destination": "München",
+    "gate": "A15",
+    "date": "2026-05-14T18:45:00",
+    "airline_id": 3,
+    "flight_duration": 1.25,
+    "price": 51200
+  },
+  {
+    "id": 81,
+    "destination": "Lisszabon",
+    "gate": "A22",
+    "date": "2026-05-14T21:30:00",
+    "airline_id": 1,
+    "flight_duration": 3.8,
+    "price": 36700
+  },
+  {
+    "id": 82,
+    "destination": "Edinburgh",
+    "gate": "B03",
+    "date": "2026-05-15T07:20:00",
+    "airline_id": 2,
+    "flight_duration": 3.05,
+    "price": 27800
+  },
+  {
+    "id": 83,
+    "destination": "Bari",
+    "gate": "A13",
+    "date": "2026-05-15T10:50:00",
+    "airline_id": 1,
+    "flight_duration": 1.4,
+    "price": 14100
+  },
+  {
+    "id": 84,
+    "destination": "Amszterdam",
+    "gate": "A14",
+    "date": "2026-05-15T13:15:00",
+    "airline_id": 7,
+    "flight_duration": 2.1,
+    "price": 65400
+  },
+  {
+    "id": 85,
+    "destination": "Valetta",
+    "gate": "A19",
+    "date": "2026-05-15T16:40:00",
+    "airline_id": 2,
+    "flight_duration": 2.2,
+    "price": 28900
+  },
+  {
+    "id": 86,
+    "destination": "Manchester",
+    "gate": "B01",
+    "date": "2026-05-15T19:25:00",
+    "airline_id": 8,
+    "flight_duration": 2.9,
+    "price": 76000
+  },
+  {
+    "id": 87,
+    "destination": "Porto",
+    "gate": "A20",
+    "date": "2026-05-16T08:05:00",
+    "airline_id": 1,
+    "flight_duration": 3.75,
+    "price": 38400
+  },
+  {
+    "id": 88,
+    "destination": "Frankfurt",
+    "gate": "A16",
+    "date": "2026-05-16T11:10:00",
+    "airline_id": 3,
+    "flight_duration": 1.7,
+    "price": 58200
+  },
+  {
+    "id": 89,
+    "destination": "Tel-Aviv",
+    "gate": "B14",
+    "date": "2026-05-16T14:00:00",
+    "airline_id": 1,
+    "flight_duration": 3.2,
+    "price": 39500
+  },
+  {
+    "id": 90,
+    "destination": "Alicante",
+    "gate": "A18",
+    "date": "2026-05-16T17:35:00",
+    "airline_id": 2,
+    "flight_duration": 3.15,
+    "price": 33100
+  },
+  {
+    "id": 91,
+    "destination": "Doha",
+    "gate": "B11",
+    "date": "2026-05-16T20:50:00",
+    "airline_id": 5,
+    "flight_duration": 5.4,
+    "price": 169000
+  },
+  {
+    "id": 92,
+    "destination": "Varsó",
+    "gate": "A07",
+    "date": "2026-05-17T09:30:00",
+    "airline_id": 9,
+    "flight_duration": 1.15,
+    "price": 34500
+  },
+  {
+    "id": 93,
+    "destination": "Isztambul",
+    "gate": "B06",
+    "date": "2026-05-17T12:15:00",
+    "airline_id": 4,
+    "flight_duration": 2.25,
+    "price": 56000
+  },
+  {
+    "id": 94,
+    "destination": "Nizza",
+    "gate": "A12",
+    "date": "2026-05-17T15:45:00",
+    "airline_id": 6,
+    "flight_duration": 2.1,
+    "price": 48200
+  },
+  {
+    "id": 95,
+    "destination": "London Stansted",
+    "gate": "B09",
+    "date": "2026-05-17T18:20:00",
+    "airline_id": 2,
+    "flight_duration": 2.65,
+    "price": 14800
+  },
+  {
+    "id": 96,
+    "destination": "Málaga",
+    "gate": "A21",
+    "date": "2026-05-17T21:10:00",
+    "airline_id": 1,
+    "flight_duration": 3.65,
+    "price": 35900
+  },
+  {
+    "id": 97,
+    "destination": "Zürich",
+    "gate": "A08",
+    "date": "2026-05-18T07:40:00",
+    "airline_id": 10,
+    "flight_duration": 1.4,
+    "price": 46700
+  },
+  {
+    "id": 98,
+    "destination": "Hamburg",
+    "gate": "A15",
+    "date": "2026-05-18T10:25:00",
+    "airline_id": 3,
+    "flight_duration": 1.6,
+    "price": 53000
+  },
+  {
+    "id": 99,
+    "destination": "Róma",
+    "gate": "A04",
+    "date": "2026-05-18T13:50:00",
+    "airline_id": 1,
+    "flight_duration": 1.85,
+    "price": 19200
+  },
+  {
+    "id": 100,
+    "destination": "Berlin",
+    "gate": "A11",
+    "date": "2026-05-18T16:30:00",
+    "airline_id": 1,
+    "flight_duration": 1.5,
+    "price": 16800
+  },
+  {
+    "id": 101,
+    "destination": "Nápoly",
+    "gate": "A05",
+    "date": "2026-05-18T19:15:00",
+    "airline_id": 2,
+    "flight_duration": 1.75,
+    "price": 14500
+  },
+  {
+    "id": 102,
+    "destination": "Oslo",
+    "gate": "A17",
+    "date": "2026-05-19T08:20:00",
+    "airline_id": 1,
+    "flight_duration": 2.45,
+    "price": 26700
+  },
+  {
+    "id": 103,
+    "destination": "Bécs",
+    "gate": "A02",
+    "date": "2026-05-19T11:00:00",
+    "airline_id": 10,
+    "flight_duration": 0.8,
+    "price": 39500
+  },
+  {
+    "id": 104,
+    "destination": "Barcelona",
+    "gate": "A20",
+    "date": "2026-05-19T14:35:00",
+    "airline_id": 2,
+    "flight_duration": 2.6,
+    "price": 25800
+  },
+  {
+    "id": 105,
+    "destination": "Koppenhága",
+    "gate": "A10",
+    "date": "2026-05-19T18:50:00",
+    "airline_id": 1,
+    "flight_duration": 1.95,
+    "price": 18200
+  },
+  {
+    "id": 106,
+    "destination": "Moszkva",
+    "gate": "A10",
+    "date": "2026-06-03T12:50:00",
+    "airline_id": 1,
+    "flight_duration": null,
+    "price": 26500
+  }
+]

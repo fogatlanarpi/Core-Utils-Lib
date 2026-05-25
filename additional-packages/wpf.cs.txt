@@ -1,0 +1,60 @@
+using Microsoft.EntityFrameworkCore;
+using MySqlX.XDevAPI;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace Flights_GUI_ujragyk
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    ///
+
+
+    public partial class MainWindow : Window
+    {
+        private FlightsContext dbContext = new FlightsContext();
+        public MainWindow()
+        {
+            InitializeComponent();
+            var járatAdatok = dbContext.Set<Flight>().ToList();
+            dgrJáratok.ItemsSource = járatAdatok;
+
+
+            var légiTársaságAdatok = dbContext.Set<Airline>().ToList();
+            légiTársaságAdatok.Insert(0, new Airline { Id = 0, Name = "" });
+            cboLégitársaság.ItemsSource = légiTársaságAdatok;
+            cboLégitársaság.DisplayMemberPath = "Name";
+            cboLégitársaság.SelectedValuePath = "Id";
+            cboLégitársaság.SelectedIndex = 0;
+
+        }
+
+        private void Keresés_Click(object sender, RoutedEventArgs e)
+        {
+            var query = dbContext.Set<Flight>().AsQueryable();
+
+            if(!string.IsNullOrWhiteSpace(txtCélállomás.Text))
+            {
+                var keresettAdat = txtCélállomás.Text.ToLower();
+                query = query.Where(x=> x.Destination.Contains(keresettAdat));
+            }
+            int selectedId = (int)cboLégitársaság.SelectedValue;
+            if(selectedId != 0)
+            {
+                query = query.Where(x => x.AirlineId == selectedId);
+            }
+
+
+            dgrJáratok.ItemsSource = query.ToList();
+        }
+    }
+}

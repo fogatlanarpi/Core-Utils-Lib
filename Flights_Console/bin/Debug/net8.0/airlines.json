@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Wizz Air" },
+  { "id": 2, "name": "Ryanair" },
+  { "id": 3, "name": "Lufthansa" },
+  { "id": 4, "name": "Turkish Airlines" },
+  { "id": 5, "name": "Emirates" },
+  { "id": 6, "name": "Air France" },
+  { "id": 7, "name": "KLM" },
+  { "id": 8, "name": "British Airways" },
+  { "id": 9, "name": "LOT Polish Airlines" },
+  { "id": 10, "name": "Austrian Airlines" }
+]

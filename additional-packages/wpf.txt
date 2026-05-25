@@ -1,0 +1,42 @@
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <GroupBox Header="Szűrés" Margin="10" Width="400">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Célállomás: " FontWeight="Bold" HorizontalContentAlignment="Right"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Légitársaság: " FontWeight="Bold" HorizontalContentAlignment="Right"/>
+
+            <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtCélállomás"/>
+            <ComboBox Grid.Row="1" Grid.Column="1" x:Name="cboLégitársaság"/>
+
+            <Button Content="Keresés" Grid.Column="3" Grid.RowSpan="2" Height="40" Width="100" Click="Keresés_Click"/>
+
+        </Grid>
+    </GroupBox>
+
+    <DataGrid Grid.Row="1" Name="dgrJáratok" AutoGenerateColumns="False" IsReadOnly="False" CanUserAddRows="False">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Id}" />
+            <DataGridTextColumn Header="Célállomás" Width="" Binding="{Binding Destination}" />
+            <DataGridTextColumn Header="Légitársaság" Width="" Binding="{Binding Airline.Name}" />
+            <DataGridTextColumn Header="Kapu" Width="" Binding="{Binding Gate}" />
+            <DataGridTextColumn Header="Dátum" Width="" Binding="{Binding Date, StringFormat=yyyy.MM.dd HH:mm}" />
+            <DataGridTextColumn Header="Hossz (óra)" Width="" Binding="{Binding FlightDuration, TargetNullValue='N/A'}" />
+            <DataGridTextColumn Header="Ár" Width="" Binding="{Binding Price, StringFormat={}{0:# ###} Ft}" />
+        </DataGrid.Columns>
+    </DataGrid>
+</Grid>
